@@ -1,3 +1,5 @@
+![image](https://github.com/MuhammadDev-OP/jotion-app/assets/85152396/3fe95150-8d5b-4b8a-9e32-bede5b137f42)
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
