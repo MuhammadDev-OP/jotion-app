@@ -15,11 +15,9 @@ const DocumentsPage = () => {
     try {
       const document = await create({ title: "Untitled" });
 
-      toast.success("New note created!"); // Assuming successful document creation
-
-      // Handle success case using the document data, if applicable
+      toast.success("New note created!");
     } catch (error) {
-      toast.error("Failed to create a new note."); // Log the error for debugging
+      toast.error("Failed to create a new note.");
     }
   };
 
