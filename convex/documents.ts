@@ -3,6 +3,11 @@ import { v } from "convex/values";
 import { mutation, query } from "./_generated/server";
 import { Doc, Id } from "./_generated/dataModel";
 
+
+// export const archive = mutation({
+   
+// })
+
 export const getSidebar = query({
   args: {
     parentDocument: v.optional(v.id("documents")),
@@ -24,6 +29,7 @@ export const getSidebar = query({
       .filter((q) => q.eq(q.field("isArchived"), false))
       .order("desc")
       .collect();
+      return documents
   },
 });
 
