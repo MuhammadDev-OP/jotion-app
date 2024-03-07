@@ -24,10 +24,15 @@ import { DocumentList } from "./document-list";
 import { Popover, PopoverContent } from "@/components/ui/popover";
 import { PopoverTrigger } from "@radix-ui/react-popover";
 import { TrashBox } from "./trash-box";
+import { useSearch } from "@/hooks/use-search";
+import { useSettings } from "@/hooks/use-settings";
+
 
 
 
 export const Navigation = () => {
+  const settings = useSettings();
+  const search = useSearch();
   const pathname = usePathname();
   const isMobile = useMediaQuery("(max-width: 768px)");
   const create = useMutation(api.documents.create);
@@ -144,8 +149,8 @@ export const Navigation = () => {
         </div>
         <div>
           <UserItem />
-          <Item label="Search" icon={Search} isSearch onClick={() => {}} />
-          <Item onClick={handleCreate} label="Setting" icon={Settings} />
+          <Item label="Search" icon={Search} isSearch onClick={search.onOpen} />
+          <Item onClick={settings.onOpen} label="Setting" icon={Settings} />
           <Item onClick={handleCreate} label="New page" icon={PlusCircle} />
         </div>
         <div className="mt-4">
